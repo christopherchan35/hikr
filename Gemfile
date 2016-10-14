@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'dotenv'
+gem 'httparty'
 
 # PostgreSQL driver
 gem 'pg'
@@ -17,6 +18,7 @@ gem 'rake'
 gem 'bcrypt'
 gem 'shotgun'
 gem 'pry'
+gem 'awesome_print'
 
 group :test do
   gem 'shoulda-matchers'
