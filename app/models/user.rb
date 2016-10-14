@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   # users.password_hash in the database is a :string
   include BCrypt
 
+  has_many :hikes
+  has_many :trails, :through => :hikes
+
 	# validates_presence_of :first_name
  #  validates_presence_of :last_name
   validates_presence_of   :username
