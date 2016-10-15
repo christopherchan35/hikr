@@ -9,7 +9,8 @@
   <a href="/users/new">Register</a>
 <% end %>
 
-<form> 
-
-
+<!-- USE GOOGLE AUTO COMPLETE FORM INSTEAD OF HTML FORM -->
+<form id="search" action="/trails" method="POST">
+  <input type="text" name="search" placeholder="Search"><br><br>
+  <input type="submit" style="position: absolute; left: -9999px">
 </form>

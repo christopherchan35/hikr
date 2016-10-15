@@ -28,7 +28,7 @@ post '/users' do
     @errors = ["Passwords do not match!"]
     erb :'users/new'
   end
-  
+
 end
 
 # USERS SHOW
@@ -42,7 +42,6 @@ get '/users/:id/edit' do
   @user = User.find(params[:id])
   erb :'users/edit'
 end
-
 
 # USERS UPDATE
 put '/users/:id' do

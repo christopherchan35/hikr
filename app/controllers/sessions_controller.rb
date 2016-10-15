@@ -2,7 +2,6 @@ get '/sessions/new' do
   erb :'sessions/new'
 end
 
-
 post '/sessions' do
   @user = User.find_by_email(params[:email])
 
@@ -17,11 +16,9 @@ post '/sessions' do
   end
 end
 
-
-
 # delete '/sessions/:id' do
 delete '/sessions' do
   # session[:id] = nil
-  logout 
+  logout
   redirect '/'
 end

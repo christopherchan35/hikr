@@ -26,4 +26,8 @@ Trail.create(:name => "Cataract Falls",
 Trail.create(:name => "Lands End Trail",
              :distance => "2.0 miles",
              :location => "Lands End Lookout 680 Point Lobos Ave, San Francisco, CA 94121"
-             )             
+             )
+Trail.create(:name => "Mission Peak",
+             :distance => "6.25 miles",
+             :location => "Mission Peak, Fremont, CA 94539"
+             )
