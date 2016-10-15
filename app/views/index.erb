@@ -63,8 +63,10 @@
         map: map
       });
   }
-
-
     </script>
+    <% @trails.each do |trail| %>
+      <%= trail.name %>
+    <% end %>
+    <h1>hi</h1>
   </body>
 </html>
