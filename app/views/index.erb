@@ -19,12 +19,37 @@
           // center: campCreek
         });
 
+
+        autocomplete = new google.maps.places.Autocomplete(
+          /** @type {!HTMLInputElement} */ (
+			    $("#search")[0]), {
+				    types: ['(regions)']
+			  });
+
+        places = new google.maps.places.PlacesService(map);
+
+        autocomplete.addListener('place_changed', onPlaceChanged);
+
+
         var marker = new google.maps.Marker({
           position: uluru,
           // position: campCreek,
           map: map
         });
       }
+
+      function onPlaceChanged() {
+	       var place = autocomplete.getPlace();
+	       console.log(place)
+	       if (place.geometry) {
+		       map.panTo(place.geometry.location);
+		       map.setZoom(12);
+	       } else {
+		       document.getElementById('search').placeholder = 'SEARCH';
+      };
+  }
+
+
     </script>
   </body>
 </html>
