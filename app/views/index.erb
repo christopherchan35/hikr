@@ -11,17 +11,17 @@
       var map;
 
       function initMap() {
-        var campCreek = {lat: 34.2636333, lng: -116.9734685};
-        // var uluru = {lat: 37.784, lng: -122.399};
+        // var campCreek = {lat: 34.2636333, lng: -116.9734685};
+        var uluru = {lat: 37.784, lng: -122.399};
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,
-          // center: uluru
-          center: campCreek
+          center: uluru
+          // center: campCreek
         });
 
         var marker = new google.maps.Marker({
-          // position: uluru,
-          position: campCreek,
+          position: uluru,
+          // position: campCreek,
           map: map
         });
       }
