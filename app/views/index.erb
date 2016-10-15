@@ -30,23 +30,38 @@
 
         autocomplete.addListener('place_changed', onPlaceChanged);
 
+        <% if @places %>
+		      <% @places.each do |place| %>
+			       var marker = new google.maps.Marker({
+				       position: { lat: <%= place.lat %>, lng: <%= place.lng %> },
+				       animation: google.maps.Animation.DROP, map: map
+			       });
+		      <% end %>
+	      <% end %>
 
-        var marker = new google.maps.Marker({
-          position: uluru,
-          // position: campCreek,
-          map: map
-        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
       }
 
       function onPlaceChanged() {
 	       var place = autocomplete.getPlace();
 	       console.log(place)
+         var input = (place['formatted_address'])
+         console.log(input)
+        //  var search = MapAdapter(input)
+        //  console.log(search)
 	       if (place.geometry) {
 		       map.panTo(place.geometry.location);
 		       map.setZoom(12);
 	       } else {
-		       document.getElementById('search').placeholder = 'SEARCH';
+		       document.getElementById('search').placeholder = 'Search';
       };
+
+      var marker = new google.maps.Marker({
+        position: place.geometry.location,
+        // position: campCreek,
+        map: map
+      });
   }
 
 
