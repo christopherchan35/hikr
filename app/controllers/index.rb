@@ -1,6 +1,7 @@
 get '/' do
-  @api_key = ENV['YOUR_API_KEY']
+  # @api_key = ENV['YOUR_API_KEY']
   @trails = Trail.all
+  @var = nil
   erb :index
 end
 
