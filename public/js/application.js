@@ -41,6 +41,7 @@ $(document).ready(function() {
          console.log(response);
         //  var obj = $.parseJSON(response);
         //  console.log(obj);
+        $('#trails').empty();
         $('#trails').append(response)
        })
      })
