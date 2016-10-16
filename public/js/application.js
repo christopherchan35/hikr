@@ -20,10 +20,8 @@ $(document).ready(function() {
       places = new google.maps.places.PlacesService(map);
 
       autocomplete.addListener('place_changed', onPlaceChanged);
-      // autocomplete.addListener('place_changed', onResults);
 
       // var infoWindow = new google.maps.InfoWindow({map: map});
-
     }
 
     function onPlaceChanged() {
@@ -31,6 +29,21 @@ $(document).ready(function() {
      console.log(place)
      var input = (place['formatted_address'])
      console.log(input)
+
+     $('#search').on('click', function(event){
+       event.preventDefault();
+       console.log("YEEEE");
+       $.ajax({
+         method: "POST",
+         url: "/"
+       })
+       .done(function(response){
+         console.log(response);
+        //  var obj = $.parseJSON(response);
+        //  console.log(obj);
+        $('#trails').append(response)
+       })
+     })
 
       if (place.geometry) {
        map.panTo(place.geometry.location);
