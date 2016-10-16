@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
-  console.log("FUCK YOU");
+  console.log("You made it!");
 });
-
+    var map;
     function initMap() {
       var uluru = {lat: 37.784, lng: -122.399};
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 6,
         center: uluru
       });
 
@@ -39,7 +39,6 @@ $(document).ready(function() {
 
      var marker = new google.maps.Marker({
       position: place.geometry.location,
-      // position: campCreek,
       map: map
     });
    }
