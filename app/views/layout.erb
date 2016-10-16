@@ -16,8 +16,7 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=<%= MapAdapter::KEY %>&callback=initMap&libraries=places"
-    async defer></script>
+
 
   <title>Hikr</title>
 </head>
@@ -27,4 +26,7 @@
   </header>
   <%= yield %>
 </body>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= MapAdapter::KEY %>&callback=initMap&libraries=places"
+async defer></script>
 </html>
