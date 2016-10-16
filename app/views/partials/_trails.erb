@@ -1,3 +1,5 @@
 <% trails.each do |trail| %>
-  <p><%= trail.name %></p>
+  <ul>
+    <a href="/trails/<%= trail.id %>"><%= trail.name %></a>
+  </ul>
 <% end %>
