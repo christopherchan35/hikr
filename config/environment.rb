@@ -18,7 +18,7 @@ require 'logger'
 require 'sinatra'
 require "sinatra/reloader" if development?
 
-require 'faker'
+# require 'faker'
 require 'erb'
 require 'dotenv'
 require 'httparty'
