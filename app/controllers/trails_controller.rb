@@ -4,6 +4,7 @@ end
 
 post '/trails' do
   @trail = Trail.create(:name => params[:name], :distance => params[:distance], :location => [:location])
+  # @trails = trails_maker
   redirect '/'
 end
 

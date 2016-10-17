@@ -6,7 +6,9 @@ get '/' do
 end
 
 post '/' do
-  @trails = Trail.all
+  # @trails = Trail.all
+  @trails = trails_maker
+
   if request.xhr?
     # @trails.to_json
     erb :'partials/_trails', layout: false, locals: {trails: @trails}
