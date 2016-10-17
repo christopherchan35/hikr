@@ -31,8 +31,6 @@ module MapAdapter
     # p places.first["activities"].first["length"]
     # places
   end
-
-
 end
 
 # MapAdapter::KEY
