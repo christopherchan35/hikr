@@ -19,6 +19,7 @@ gem 'bcrypt'
 gem 'shotgun'
 gem 'pry'
 gem 'awesome_print'
+gem 'unirest'
 
 group :test do
   gem 'shoulda-matchers'
