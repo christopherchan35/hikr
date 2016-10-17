@@ -1,3 +1,2 @@
-coo coo coo
-
+hikr
 we got dem hikez
