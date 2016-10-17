@@ -24,6 +24,7 @@ require 'dotenv'
 require 'httparty'
 require 'pry'
 require 'awesome_print'
+require 'unirest'
 
 Dotenv.load
 

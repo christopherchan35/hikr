@@ -1,13 +1,14 @@
 $(document).ready(function() {
 
-  console.log("FUCK YOU");
+  console.log("You made it!");
 });
-
+    var map;
     function initMap() {
       var uluru = {lat: 37.784, lng: -122.399};
-      var map = new google.maps.Map(document.getElementById('map'), {
+      map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
-        center: uluru
+        center: uluru,
+        disableDefaultUI: true
       });
 
       autocomplete = new google.maps.places.Autocomplete(
@@ -20,8 +21,7 @@ $(document).ready(function() {
 
       autocomplete.addListener('place_changed', onPlaceChanged);
 
-      var infoWindow = new google.maps.InfoWindow({map: map});
-
+      // var infoWindow = new google.maps.InfoWindow({map: map});
     }
 
     function onPlaceChanged() {
@@ -30,16 +30,31 @@ $(document).ready(function() {
      var input = (place['formatted_address'])
      console.log(input)
 
+     $('#search').on('click', function(event){
+       event.preventDefault();
+       console.log("YEEEE");
+       $.ajax({
+         method: "POST",
+         url: "/"
+       })
+       .done(function(response){
+         console.log(response);
+        //  var obj = $.parseJSON(response);
+        //  console.log(obj);
+        $('#trails').empty();
+        $('#trails').append(response)
+       })
+     })
+
       if (place.geometry) {
        map.panTo(place.geometry.location);
-       map.setZoom(12);
+       map.setZoom(10);
      } else {
        document.getElementById('search').placeholder = 'Search';
      };
 
      var marker = new google.maps.Marker({
       position: place.geometry.location,
-      // position: campCreek,
       map: map
     });
    }

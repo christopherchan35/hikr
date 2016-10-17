@@ -3,19 +3,13 @@ get '/trails/new' do
 end
 
 post '/trails' do
-  @trail = Trail.create(:name => params[:name], :distance => params[:distance], :location => [:location])
+  @trail = Trail.create(:name => params[:name], :city => params[:city], :description => [:description], :length => [:length])
+  # @trails = trails_maker
   redirect '/'
 end
 
-# get '/' do
-#   # @trails = Trail.all
-#   # p @trails
-#   p "*" * 30
-#   erb :index
-# end
-#
-# # post '/trails' do
-# #   @trails = Trails.all
-# #   p "what up"
-# #   redirect '/'
-# # end
+get '/trails/:id' do
+  p params
+  @trail = Trail.find(params[:id])
+  erb :'trails/show'
+end
