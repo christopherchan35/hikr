@@ -1,12 +1,26 @@
-<% if current_user %>
-  <a href="/users/<%= current_user.id %> ">Profile Page</a>
-  <form action="/sessions" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Logout">
-  </form>
-<% else %>
-  <a href="/sessions/new">Login</a>
-  <a href="/users/new">Register</a>
-<% end %>
 
-  <input id="search" type="text" name="search" placeholder="Search"><br><br>
+<div id="navbar-search-container">
+<ul id="navbar">
+  <% if current_user %>
+    <li><a href="/users/<%= current_user.id %> ">Profile Page &nbsp; &nbsp;</a></li>
+    <form action="/sessions" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <li><input type="submit" value="Logout"></li>
+    </form>
+    <a href="/"></a>
+  <% else %>
+    <li><a href="/sessions/new">Login &nbsp; &nbsp;</a></li>
+    <li><a href="/users/new">Register &nbsp; &nbsp;</a></li>
+  <% end %>
+
+  <li><input id="search" type="text" name="search" placeholder="Search"></li>
+</div>
+
+<div id="hiker-logo-container">
+  <img id="hiker" src="hike.png" alt="hike logo" />
+  <li id="title" class="btn btn-dark btn-lg"><a href="/"><strong>hikr</strong></a></li>
+</div>
+
+<div id="right-container">
+  </div>
+</ul>

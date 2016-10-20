@@ -2,10 +2,70 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 #map {
   height: 80%;
   width: 70%;
   float: left;
   margin-right: 4em;
+}
+
+li {
+  display: inline;
+  font-weight :bold;
+}
+
+#title {
+  /*margin-left: 25em;*/
+  font-size: 125%;
+  text-decoration: none;
+}
+
+li > a, li > a:hover {
+  text-decoration: none;
+  color:  #595959;
+}
+
+li > a:hover{
+  color: black;
+}
+
+/*body {
+  background-color: black;
+}*/
+
+#hiker {
+  /*background-color: black;*/
+  width: 23px;
+  height: 23px;
+}
+
+#navbar, #navbar li {
+  background-color: #e6e6e6;
+  display: inline;
+}
+
+header {
+  width: 100%;
+  /*display: flex;
+  justify-content: space-between;*/
+  background-color: #e6e6e6;
+  margin-bottom: 1em;
+}
+
+#navbar-search-container{
+  display: inline-block;
+  width: calc(33% - 1em);
+}
+
+#hiker-logo-container{
+  display: inline-block;
+  width: calc(33% - 1em);
+  text-align: center;
+}
+
+#right-container{
+  display: inline-block;
+  width: calc(33% - 1em);
 }
