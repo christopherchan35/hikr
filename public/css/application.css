@@ -12,6 +12,7 @@ html, body {
 
 li {
   display: inline;
+  font-weight :bold;
 }
 
 #title {
@@ -20,6 +21,12 @@ li {
   text-decoration: none;
 }
 
-a {
+li > a, li > a:hover {
   text-decoration: none;
+  color:  #595959;
+}
+
+li > a:hover{
+  color: black;
+;
 }
