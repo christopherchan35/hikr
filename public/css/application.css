@@ -9,3 +9,17 @@ html, body {
   float: left;
   margin-right: 4em;
 }
+
+li {
+  display: inline;
+}
+
+#title {
+  margin-left: 25em;
+  font-size: 125%;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
