@@ -1,4 +1,6 @@
-<ul>
+
+<div id="navbar-search-container">
+<ul id="navbar">
   <% if current_user %>
     <li><a href="/users/<%= current_user.id %> ">Profile Page &nbsp; &nbsp;</a></li>
     <form action="/sessions" method="POST">
@@ -12,6 +14,13 @@
   <% end %>
 
   <li><input id="search" type="text" name="search" placeholder="Search"></li>
+</div>
 
+<div id="hiker-logo-container">
+  <img id="hiker" src="hike.png" alt="hike logo" />
   <li id="title" class="btn btn-dark btn-lg"><a href="/"><strong>hikr</strong></a></li>
+</div>
+
+<div id="right-container">
+  </div>
 </ul>
