@@ -7,9 +7,9 @@ helpers do
       Trail.find_or_create_by(:name => trail["name"],
                    :city => trail["city"],
                    :description => trail["activities"].first["description"],
-                   :length => trail["activities"].first["length"],
-                   :lat => trail["lat"],
-                   :lon => trail["lon"])
+                   :length => trail["activities"].first["length"])#,
+                   #:lat => trail["lat"],
+                   #:lon => trail["lon"])
     end
   end
 end
