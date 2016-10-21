@@ -2,6 +2,7 @@ get '/' do
   # @api_key = ENV['YOUR_API_KEY']
   # @trails = Trail.all
   # @trails.to_json
+  trails_maker
   erb :index
 end
 
