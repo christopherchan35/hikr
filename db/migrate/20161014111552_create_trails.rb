@@ -9,6 +9,8 @@ class CreateTrails < ActiveRecord::Migration
       t.string :city
       t.string :description
       t.float :length
+      t.float :lat
+      t.float :lon
 
       t.timestamps
     end

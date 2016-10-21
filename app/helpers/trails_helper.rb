@@ -4,10 +4,12 @@ helpers do
     places = MapAdapter.trail
 
     places.map do |trail|
-      Trail.create(:name => trail["name"],
+      Trail.find_or_create_by(:name => trail["name"],
                    :city => trail["city"],
                    :description => trail["activities"].first["description"],
-                   :length => trail["activities"].first["length"])
+                   :length => trail["activities"].first["length"],
+                   :lat => trail["lat"],
+                   :lon => trail["lon"])
     end
   end
 end

@@ -1,6 +1,24 @@
 $(document).ready(function() {
 
   console.log("You made it!");
+  $('#trails').on('click', 'p > a', function(event){
+    event.preventDefault();
+    console.log('stopped the link');
+    var data = $(this).attr('href');
+    console.log("data:", data);
+    var id = data[8] + data[9] + data[10];
+    console.log(id);
+    $.ajax({
+      url: '/trails/show/' + id,
+      method: 'GET'
+      // data: id
+    })
+    .done(function(response){
+      console.log(response);
+      $('#trails').hide();
+      $('#info').append(response)
+    })
+  })
 });
     var map;
     function initMap() {

@@ -24,11 +24,14 @@ module MapAdapter
     "X-Mashape-Key" => ENV['TRAIL_KEY'],
     "Accept" => "text/plain"
     }
+
     places = response.body["places"]
     # p places.first["city"]
     # p places.first["name"]
-    # p places.first["activities"].first["description"]
-    # p places.first["activities"].first["length"]
+    # p places.first[vities"].first["dess
+    # p places.first["lon"]"].first["]lcription"]
+    # p places.first["activitie"actiength"]
+    # p places.first["lat"
     # places
   end
 end
